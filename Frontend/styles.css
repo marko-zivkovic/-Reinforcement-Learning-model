@@ -1,0 +1,71 @@
+body {
+    text-align: center; /* Aligns text to the center */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    /*justify-content: center; /* Centers the content vertically */
+    min-height: 100vh; /* Ensures the body takes up at least the full height of the viewport */
+    margin: 0; /* Removes default margin */
+}
+
+/* You might need to adjust styles of other elements to work with flexbox, 
+   for instance, making the map container a flex item if it's not already. */
+
+#game-map {
+    display: grid;
+    /* Adjust the grid-template-columns based on your map's width */
+    grid-template-columns: repeat(26, 40px); /* Assuming 26 columns and each tile is 40px wide */
+}
+
+.tile {
+    width: 40px;
+    height: 40px;
+    background-image: url('placeholder.png'); /* Placeholder image for each tile */
+    background-size: cover;
+}
+
+/* Popup container */
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #444;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+    width: 300px;
+}
+
+/* Popup header */
+.popup-header {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Input field */
+.popup-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+/* Restart button */
+#restartButton {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#restartButton:hover {
+    background-color: #45a049;
+}
